@@ -1,0 +1,11 @@
+/* this is the home screen background image styling */
+.home_image {
+    /* keeps image in viewport */
+    width: 100%;
+    /* keeps image behind any other images. */
+    z-index: -1;
+    /* allows other images to overlap from the bottom */
+    margin-bottom: -150px;
+    /* applies fade out of image toward bottom */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
