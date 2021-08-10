@@ -28,6 +28,11 @@
     color: #111
 }
 
+/* displays ratings stars horizontally */
+.product_rating {
+    display: flex;
+}
+
 .product_price {
     margin-top: 15px;
 }

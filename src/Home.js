@@ -12,7 +12,11 @@ function Home() {
         />
 
         <div className="home_row">
-           <Product /> 
+           <Product title="Sawyer Mini Filter" 
+           price={19.99} 
+           image="https://m.media-amazon.com/images/I/81Dhvd3jvCL._AC_SY400_.jpg" 
+           rating={5}
+           />
            <Product /> 
         </div>
 
