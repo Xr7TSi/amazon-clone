@@ -12,8 +12,6 @@ function Product() {
                 </p>
                 <div className="product_rating">
                     <p>⭐</p>
-                    <p>⭐</p>
-                    <p>⭐</p>
                 </div>
             </div>
             <img src="https://m.media-amazon.com/images/I/81Dhvd3jvCL._AC_SY400_.jpg" alt=""/>
