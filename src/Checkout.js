@@ -1,8 +1,11 @@
 import React from "react";
 import "./Checkout.css";
-import Subtotal from "./Subtotal.js"
+import Subtotal from "./Subtotal.js";
+import { useStateValue } from "./StateProvider"
+
 
 function Checkout() {
+
   return (
     <div className="checkout">
       <div className="checkout-left">
