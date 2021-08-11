@@ -29,7 +29,7 @@ const reducer = (state, action) => {
 
            return {
                ...state, cart: newCart
-           }    
+           }     
 
         default:
             return state
