@@ -7,7 +7,7 @@ import CheckoutProduct from './CheckoutProduct';
 
 
 function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ cart }, dispatch] = useStateValue();
 
   return (
     <div className="checkout">
@@ -20,7 +20,7 @@ function Checkout() {
 
         <div>
           <h2 className="checkout_title">Shopping Cart</h2>
-          {basket.map(item => (
+          {cart.map(item => (
             <CheckoutProduct
             id={item.id}
             title={item.title}
