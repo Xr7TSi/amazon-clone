@@ -37,7 +37,7 @@ function Header() {
         {/* if the condition!user (no user) is true, render ./login on click */}
         <Link to={!user && './login'}>
         <div onClick={handleAuth} className="header_option">
-          <span className="header_optionLineOne">Hello Guest</span>
+          <span className="header_optionLineOne">Hello, {user?.email}</span>
           {/* if user is present, show Sign Out, otherwise, Sign In */}
           <span className="header_optionLineTwo">{user ? 
           'Sign Out' : 'Sign In'}</span>
