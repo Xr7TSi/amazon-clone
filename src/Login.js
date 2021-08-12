@@ -2,7 +2,7 @@ import React, {useState } from 'react'
 import './login.css'
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "./firebase";
-import userEvent from '@testing-library/user-event';
+
 
 
 
@@ -15,17 +15,22 @@ function Login() {
 
     const signIn = e => {
         e.preventDefault();
+        auth
+        .signInWithEmailAndPassword(email, password)
+        .then(auth =>  {
+            history.push('/');
+        })
+        .catch(err => alert(err.message));
     }
 
     const register = e => {
         e.preventDefault();
-
         auth 
         .createUserWithEmailAndPassword(email, password)
         .then((auth) => {
             console.log(auth);
         })
-        .catch(error => alert(error.message));
+        .catch(err => alert(err.message));
 
         if(auth) {
             history.push('/');
