@@ -1,0 +1,33 @@
+For fresh instals of this app on a new pc, install firebase-tools.
+
+
+
+To deploy for similar App build-outs...
+
+Launch firebase UI by running "firebase login" from the command line.
+
+From the command line run "firebase init".   Initializes a Firebase project in the terminal's directory \.
+
+This app's firebase init selection includes the following:
+-(*) Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys.
+-Public directory is set to build, no parentheses.
+-y for single page application (Because this is a React app)
+-Set up auto builds and deploys with Github - y
+-Set up the workflow to run a build script before every deploy? - y
+-What script should be run before every deploy? - npm ci && npm run build
+-Set up automatic deployment to your site's live channel when a PR is merged? - Y
+-What is the name of the GitHub branch associated with your site's live channel? - master
+
+Create production build after initialization is complete:
+npm run build
+
+to deploy - firebase deploy
+
+Project Console: https://console.firebase.google.com/project/clone-14498/overview
+Hosting URL: https://clone-14498.web.app
+
+*After code updates, run npm build again to move changes into the build.
+
+
+
+

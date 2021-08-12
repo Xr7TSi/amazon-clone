@@ -12,8 +12,10 @@ import { auth } from "./firebase"
 function Header() {
   const [{ cart, user }, dispatch] = useStateValue();
 
-  const handleAuthentication = () => {
+  const handleAuth = () => {
+    if(user) {
     auth.signOut();
+    }
   };
 
 
@@ -32,8 +34,9 @@ function Header() {
       </div>
 
       <div className="header_nav">
-        <Link to='./login'>
-        <div onClick={handleAuthentication} className="header_option">
+        {/* if the condition!user (no user) is true, render ./login on click */}
+        <Link to={!user && './login'}>
+        <div onClick={handleAuth} className="header_option">
           <span className="header_optionLineOne">Hello Guest</span>
           {/* if user is present, show Sign Out, otherwise, Sign In */}
           <span className="header_optionLineTwo">{user ? 

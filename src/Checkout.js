@@ -7,7 +7,7 @@ import CheckoutProduct from './CheckoutProduct';
 
 
 function Checkout() {
-  const [{ cart }, dispatch] = useStateValue();
+  const [{ cart, user }, dispatch] = useStateValue();
 
   return (
     <div className="checkout">
@@ -19,6 +19,8 @@ function Checkout() {
         />
 
         <div>
+          {/* the ? prevents user.email from being accessed until the user is available from firebase.   */}
+          <h3>Hello, {user?.email}</h3>
           <h2 className="checkout_title">Shopping Cart</h2>
           {cart.map(item => (
             <CheckoutProduct
