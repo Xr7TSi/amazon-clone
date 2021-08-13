@@ -29,7 +29,7 @@
 }
 
 /* payment.address and payment_items take up 80% of the viewport */
-.payment_address, .payment_items {
+.payment_address, .payment_items, .payment_details {
     flex: .8;
 }
 
