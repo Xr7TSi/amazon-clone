@@ -4,9 +4,10 @@ import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import { Link, useHistory } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import CurrencyFormat from 'react-currency-format';
+import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "./reducer";
-import axios from './axios';
+import axios from "./axios";
+import { db } from "./firebase"
 
 function Payment() {
 
@@ -55,6 +56,14 @@ function Payment() {
             }
             // paymentIntent is strip speak for payment confirmation
         }).then(({ paymentIntent }) => {
+            // gets user data then sets to firebase db.
+            db.collection('users').doc(user.uid).collection('orders').doc(paymentIntent.id)
+                .set({
+                    cart: cart,
+                    amount: paymentIntent.amount,
+                    created: paymentIntent.created
+                });
+
             setSucceeded(true);
             setError(null);
             setProcessing(false);
