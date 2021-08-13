@@ -3,3 +3,5 @@ npm i @stripe/stripe-js
 npm i @stripe/react-stripe-js 
 
 Use Blaze Plan on Firebase.  It's free.
+
+switch from test keys to live keys to actually accept payments

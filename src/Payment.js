@@ -58,6 +58,9 @@ function Payment() {
             setSucceeded(true);
             setError(null);
             setProcessing(false);
+            dispatch({
+                type:'EMPTY_CART'
+            })
             // return user to orders page after payment is complete 
             history.replace('/orders')
         })
