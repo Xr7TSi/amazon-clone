@@ -59,7 +59,7 @@ function Payment() {
             setError(null);
             setProcessing(false);
             // return user to orders page after payment is complete 
-            history.replaceState('/orders')
+            history.replace('/orders')
         })
     }
 
