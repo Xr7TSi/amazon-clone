@@ -26,9 +26,12 @@ function Payment() {
     useEffect(() => {
         // generate stripe secret for transaction
         const getClientSecret = async () => {
-            const response = await axios
-        }
-    
+            const response = await axios ({
+                method: "post",
+                url: `/payments/create?total=${getCartTotal(cart) }`
+        })
+    }
+        getClientSecret()
     }, [cart]);
 
     const handleSubmit =  async (event) => {
