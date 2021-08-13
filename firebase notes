@@ -1,8 +1,8 @@
 For fresh instals of this app on a new pc, install firebase-tools.
 
-
-
 To deploy for similar App build-outs...
+
+Front end:
 
 Launch firebase UI by running "firebase login" from the command line.
 
@@ -27,6 +27,22 @@ Project Console: https://console.firebase.google.com/project/clone-14498/overvie
 Hosting URL: https://clone-14498.web.app
 
 *After code updates, run npm build again to move changes into the build.
+
+Backend:
+
+From the command line run "firebase init".
+
+Select Functions: Configure a cloud....
+
+Select JavaScript
+
+Y to catch probable bugs
+
+Y to install dependencies
+
+*Creates functions folder for the back end
+
+
 
 
 

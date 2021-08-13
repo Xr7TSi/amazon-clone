@@ -12,16 +12,12 @@ function Payment() {
 
     const [{ cart, user }, dispatch] = useStateValue();
     const history = useHistory();
-
     const stripe = useStripe();
     const elements = useElements();
-    
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState("");
-    
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
-
     const [clientSecret, setClientSecret] = useState(true);
 
     useEffect(() => {
