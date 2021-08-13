@@ -40,7 +40,7 @@ function Payment() {
         
     }, [cart])
 
-    console.log('client secret is', clientSecret);
+   
 
     
 
