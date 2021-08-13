@@ -20,18 +20,29 @@ function Payment() {
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState(true);
 
+
+
+
     useEffect(() => {
         // generate stripe secret for transaction
         const getClientSecret = async () => {
-            const response = await axios ({
-                method: "post",
-                // stripe requires input in currency subunits, or cents for us currency.  this is what cart total is multiplied by 100.
-                url: `/payments/create?total=${getCartTotal(cart) * 100 }`
-        })
-        setClientSecret(response.data.clientSecret);
-    }
-        getClientSecret()
-    }, [cart]);
+            const response = await axios({
+                method: 'post',
+                 // stripe requires input in currency subunits, or cents for us currency.  this is what cart total is multiplied by 100.
+                 // route created in functions/index.js 
+                 url: `/payments/create?total=${getCartTotal(cart) * 100}`
+            });
+            setClientSecret(response.data.clientSecret)
+            
+        }
+
+        getClientSecret();
+        
+    }, [cart])
+
+    console.log('client secret is', clientSecret);
+
+    
 
     const handleSubmit =  async (event) => {
         event.preventDefault();
