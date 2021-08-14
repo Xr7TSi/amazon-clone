@@ -42,3 +42,23 @@
     margin-bottom: 15px;
 }
 
+.payment_details {
+    max-width: 400px;
+}
+
+.payment_details > h4 {
+    padding-bottom: 20px;
+}
+
+.payment_details > form > div > button {
+    background: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    border: 1px solid;
+    height: 30px;
+    font-weight: bolder;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+
