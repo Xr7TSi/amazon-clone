@@ -2,7 +2,7 @@ import React from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from "./StateProvider";
 
-function CheckoutProduct({id, image, title, price, rating}) {
+function CheckoutProduct({id, image, title, price, rating, hideButton}) {
 
     const [{ cart }, dispatch] = useStateValue();
 
@@ -32,8 +32,11 @@ function CheckoutProduct({id, image, title, price, rating}) {
                         <p>⭐</p>
                     ))}
                 </div>
+                {/* hideButton prop exists in Order.js.  When the Order component is rendered, hideButton is true.  
+                When there is no hideButton, the removeFromCart button is rendered.  */}
+                {!hideButton && (
                 <button onClick={removeFromCart}>Remove from cart</button>
-              
+                )}
             </div>
         </div>
     )
