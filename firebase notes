@@ -21,7 +21,7 @@ This app's firebase init selection includes the following:
 Create production build after initialization is complete:
 npm run build
 
-to deploy - firebase deploy
+to deploy - firebase deploy --only hosting
 
 Project Console: https://console.firebase.google.com/project/clone-14498/overview
 Hosting URL: https://clone-14498.web.app
