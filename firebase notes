@@ -44,6 +44,14 @@ Y to install dependencies
 
 *Test credit card number is all 424242424242424242
 
+To run locally:
+
+In root directory: npm start
+In functions directory: firebase emulators:start
+
+
+
+
 
 
 
