@@ -12,11 +12,8 @@ This app's firebase init selection includes the following:
 -(*) Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys.
 -Public directory is set to build, no parentheses.
 -y for single page application (Because this is a React app)
--Set up auto builds and deploys with Github - y
--Set up the workflow to run a build script before every deploy? - y
--What script should be run before every deploy? - npm ci && npm run build
--Set up automatic deployment to your site's live channel when a PR is merged? - Y
--What is the name of the GitHub branch associated with your site's live channel? - master
+-Set up auto builds and deploys with Github - n
+
 
 Create production build after initialization is complete:
 npm run build
